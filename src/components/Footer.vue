@@ -2,7 +2,7 @@
     <div>
         <footer>
             <span>
-                Copyright &copy;2022, All rights reserved. 
+                <p>Copyright &copy;2022, All rights reserved. </p>
                 <!-- link to githubnpm -->
                 <a href= https://github.com/siyolisemekuto/EOMP_Fullstack target='_blank'> 
                 Made by Live Maweni and Siyolise Mekuto.
@@ -15,15 +15,19 @@
 <style scoped>
 footer {
   text-align: center;
-  /* padding: 3px; */
+  /* padding-bottom: 5px; */
   background-color: #141414;
   color: white;
   display: block;
   height: 70px;
   display:flex;  
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+span{
+    padding-bottom: 12px;
 }
 a{
   text-decoration: none;
