@@ -3,12 +3,12 @@
     <h1>Register</h1>
    <form @submit.prevent="SubmitForm">
           <div >
-            <input type="text" name="full_name" id="full_name" class="inputs" placeholder="Full name" required v-model="Password">
-            <input type="email" name="email" id="email" class="inputs" placeholder="Email" required  v-model="email">
-            <input type="password" name="password" id="password" class="inputs" placeholder="Password" required v-model="Password">
-            <input type="text" name="contact_number" id="contact_number" class="inputs" placeholder="Contact Number" required v-model="Password">
+            <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Full name" required v-model="Password">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required  v-model="email">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required v-model="Password">
+            <input type="text" name="contact_number" id="contact_number" class="form-control" placeholder="Contact Number" required v-model="Password">
           </div>
-          <button type="submit" class="btn">Register</button>
+          <button type="submit" class="btn" v-on:click="handle">Register</button>
   </form>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   flex-direction: column;
   padding: 10px;
 }
-.inputs{
+.form-control{
     width: 70%;
     padding: 10px;
     margin: 20px;

@@ -3,10 +3,10 @@
     <h1>landing/login</h1>
     <form @submit.prevent="SubmitForm">
       <div >
-        <input type="email" name="email" id="email" class="inputs" placeholder="Email" required  v-model="email">
-        <input type="password" name="password" id="password" class="inputs" placeholder="Password" required v-model="Password">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required  v-model="email">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required v-model="Password">
       </div>
-      <button type="submit" class="btn">Log in</button>
+      <button type="submit" class="btn" v-on:click="Login()">Log in</button>
     </form>
     <router-link :to="{name:'register'}">Create and account</router-link>
   </div>
@@ -15,10 +15,15 @@
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+  methods: {
+    login(){
+    if(this.input.email == "user.email" && this.input.password === "user.password")
+  } else{
+    console.log("the email or password is incorrect")
+  }
+  }, 
 }
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
