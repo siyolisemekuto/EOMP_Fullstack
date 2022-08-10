@@ -1,22 +1,21 @@
 <template>
-    
-      <div class="container">
-      <h1>Welcome</h1>
-      <form @submit.prevent="SubmitForm">
-          <div >
-          <input type="email" name="email" id="email" class="inputs" placeholder="Email" required  v-model="email">
-          <input type="password" name="password" id="password" class="inputs" placeholder="Password" required v-model="Password">
-          </div>
-          <button type="submit" class="btn">Submit</button>
-  </form>
+  <div class="container">
+    <h1>landing/login</h1>
+    <form @submit.prevent="SubmitForm">
+      <div >
+        <input type="email" name="email" id="email" class="inputs" placeholder="Email" required  v-model="email">
+        <input type="password" name="password" id="password" class="inputs" placeholder="Password" required v-model="Password">
+      </div>
+      <button type="submit" class="btn">Log in</button>
+    </form>
+    <router-link :to="{name:'register'}">Create and account</router-link>
   </div>
        
 </template>
 
 <script>
 export default {
-  name: 'Login',
- 
+  name: 'Login'
 }
 
 
@@ -24,38 +23,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Ubuntu:wght@300&display=swap');
-#landing{
-  display: flex;
-  width: fit-content;
-  background: linear-gradient(0.5turn, #F5F5DC, #D8A23A);
-  height: fit-content;
-
-}
-.row{
-display: flex;
-justify-content: center;
-}
-#about{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin:auto;
-  padding: 5%;
-}
-.about-text{
-  width: fit-content;
-  text-align: center;
-}
-img{
-  width:vw;
-  height:30vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background:none;
-  object-fit: center;
-}
 
 .container{
   width: fit-content;

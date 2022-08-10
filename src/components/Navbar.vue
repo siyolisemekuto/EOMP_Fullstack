@@ -1,42 +1,15 @@
 <template>
-    <header :class="{'scrolled-nav':scrollPosition}">
-    <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-       <router-link to="/home" class="nav-brand nav-links" >Personal Fumes</router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-       <router-link to="/home" class="nav-brand nav-links" >Personal Fumes</router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNav">
-       <ul  class="navbar-nav w-100">
-          <li><router-link to="/register" class="nav-link">Register</router-link></li>
-          <li><router-link to="/login" class="nav-link">Log in</router-link></li>
-          <li><router-link to="/admin" class="nav-link">Become an admin</router-link></li>
-          <li><router-link to="/products" class="nav-link">Products</router-link></li>
-          <li><router-link to="/cart" class="nav-link">Cart</router-link></li>
-        </ul>
-    </div>
+    <nav class="navbar">
+  <div class="container">
+    <h4>Personal Fumes</h4>
   </div>
 </nav>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </header>
 </template>
 
 <script>
 export default {
     data(){
         return{
-            logo:"https://i.postimg.cc/DfBt2NmB/logo-removebg-preview.png",
             scrollPosition:null,
             mobile:false,
             mobileNav:false,
@@ -70,9 +43,8 @@ export default {
 <style scoped>
    
    nav{
-    background: #6D5E7D;
-    opacity: 0.9;
-    box-shadow: 20px ;
+    background-color: #141414;
+    box-shadow: 10px ;
     position: fixed;
     top: 0;
     right: 0;
@@ -81,7 +53,12 @@ export default {
     padding: 10px;
     width: 100%;
    }
-   .nav-link{
+   h4{
+    color:white;
+    text-decoration: underline;
+    font-size: 25px;
+   }
+   /* .nav-link{
     text-decoration:none;
     display:flex;
     align-items: center;
@@ -141,7 +118,7 @@ export default {
     display:flex;
     flex-direction: column;
     justify-content: end;
-   }
+   } */
 
 
 </style>
