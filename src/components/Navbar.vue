@@ -119,6 +119,7 @@ export default {
     height:100%;
     width:100%;
    }
+
    .image-div{
     width: 80px;
     height: 50px;
@@ -152,5 +153,5 @@ export default {
     flex-direction: column;
     justify-content: end;
    }
-    
+
 </style>
