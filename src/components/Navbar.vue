@@ -2,7 +2,7 @@
     <header :class="{'scrolled-nav':scrollPosition}">
     <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-       <router-link to="/home" class="nav-brand nav-links image-div" >Personal Fumes</router-link>
+       <router-link to="/home" class="nav-brand nav-links" >Personal Fumes</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
       <ul class="navbar-nav">
         <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-       <router-link to="/home" class="nav-brand nav-links image-div" >Personal Fumes</router-link>
+       <router-link to="/home" class="nav-brand nav-links" >Personal Fumes</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -120,17 +120,6 @@ export default {
     width:100%;
    }
 
-   .image-div{
-    width: 80px;
-    height: 50px;
-    margin-bottom:-10px;
-   }
-   .img{
-    width: 100%;
-    max-width: fit-content;
-    height: 100%;
-    max-height: fit-content;
-   }
    .nav-links .router-link-exact-active {
     border-bottom: display;
     transition: all 0.35s ease-in-out;
@@ -154,59 +143,5 @@ export default {
     justify-content: end;
    }
 
-
-    /* nav{
-        position:relative;
-        display:flex;
-        flex-direction:row;
-        padding:12px 0;
-        transition:3s ease all;
-        width:90%;
-        margin: 0 auto;
-        
-        @media screen (max-width: 700px){
-            ul{
-                list-style:none;
-                text-decoration:none;
-            }
-            li{
-                padding:16px;
-                margin-left:16px;
-            }
-            .nav-link{
-                font-size:14px;
-                transitions: 3s ease all;
-                padding-bottom: 4px;
-                border-bottom: 1px solid transparent;
-            }
-            .nav-link:hover{
-                color: red;
-                border-color:red;
-
-            }
-            .nav-links{
-                display:flex;
-                align-items:center;
-                justify-content:end;
-            }
-            .icon{
-                display:flex;
-                align-items: center;
-                position:absolute;
-                top:0;
-                rigth:24px;
-                height:100%;
-
-                i{
-                    cursor:pointer;
-                    font-size:24px;
-                    transition:1s ease all;
-                }
-            }
-            .icon-active{
-                transform:rotate(180deg);
-            }
-        }
-    } */
 
 </style>
