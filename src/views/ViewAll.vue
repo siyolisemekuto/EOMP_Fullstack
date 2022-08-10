@@ -1,14 +1,14 @@
 <template>
     <div>
-       <Login/> 
+        <Catalogue/>
     </div>
 </template>
 <script>
-import Login from '@/components/Login.vue'
+import Catalogue from '@/components/Catalogue.vue'
 export default {
-    name:'LoginView',
+    name: 'ViewAll',
     components:{
-        Login
+        Catalogue
     }
 }
 </script>
