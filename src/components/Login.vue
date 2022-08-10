@@ -18,11 +18,13 @@ export default {
   name: 'Login',
   methods: {
     login(){
-    if(this.input.email == "user.email" && this.input.password === "user.password")
-  } else{
-    console.log("the email or password is incorrect")
-  }
+    if(this.input.email == "user.email" && this.input.password === "user.password"){
+      console.log("logged in");
+    } else{
+      console.log("the email or password is incorrect")
+    }
   }, 
+}
 }
 </script>
 

@@ -1,7 +1,18 @@
 <template>
-    <nav class="navbar">
-  <div class="container">
-    <h4>Personal Fumes</h4>
+    <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Personal Fumes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <router-link class="nav-link active" aria-current="page" href="#">Login in</router-link>
+        <router-link class="nav-link" href="#">Catalogue</router-link>
+        <router-link class="nav-link" href="#">Cart</router-link>
+        <router-link class="nav-link" href="#">Profile</router-link>
+      </div>
+    </div>
   </div>
 </nav>
 </template>
@@ -53,11 +64,16 @@ export default {
     padding: 10px;
     width: 100%;
    }
-   h4{
+   .navbar-brand{
     color:white;
     text-decoration: underline;
     font-size: 25px;
+    margin-top: 15px;
    }
+   .container-fluid{
+    height:50px;
+   }
+
    /* .nav-link{
     text-decoration:none;
     display:flex;
