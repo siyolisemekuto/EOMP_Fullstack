@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
        <h1>tHIS is a prrofile</h1> 
     </div>
 </template>

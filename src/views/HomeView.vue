@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-   
+  <div class="home page">
+   <HelloWorld/>
   </div>
 </template>
 
@@ -17,12 +17,5 @@ export default {
 </script>
 
 <style scope>
-.home{
-  /* background-size:100%; */
-  background-image:url('https://i.postimg.cc/pLyCyBVq/wallpaper.jpg');
-  /* background-color:#cccccc; */
-  background-repeat:no-repeat;
-  height:90vh;
-  /* align-items:center; */
-}
+
 </style>

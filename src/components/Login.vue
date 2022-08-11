@@ -1,6 +1,8 @@
 <template>
+ <div>
+  <h1>Personal Fumes</h1>
   <div class="container">
-    <h1>landing/login</h1>
+    <h1>Log in to your account.</h1>
     <form @submit.prevent="SubmitForm">
       <div >
         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required  v-model="email">
@@ -10,42 +12,43 @@
     </form>
     <router-link :to="{name:'register'}">Create and account</router-link>
   </div>
-       
+</div>    
 </template>
 
 <script>
 export default {
   name: 'Login',
-  methods: {
-    login(){
-    if(this.input.email == "user.email" && this.input.password === "user.password"){
-      console.log("logged in");
-    } else{
-      console.log("the email or password is incorrect")
-    }
-  }, 
+  methods: "POST"
 }
-}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.container{
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+.page{
+  display:block;
+  padding:0 40px;
+  background-color:rgb(250, 249, 246);
 }
-.inputs{
-    width: 70%;
-    padding: 10px;
-    margin: 20px;
-    border: none;
-    border-bottom: 1px solid;
-    background:inherit;
+.container{
+  background-color:white;
+  width: 50vw;
+  height: 68vh;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  border:1px solid;
+  
+}
+h1{
+  font-size:25px;
+}
+input{
+    height: 48px;
+    padding: 19px 16px 7px;
+    /* margin: 20px;
+    border: none; */
+    border: 1px solid;
+    /* background:inherit; */
 }
 :-ms-input-placeholder::after{
     display: none;
@@ -62,7 +65,7 @@ form{
   flex-direction:column;
   justify-content: center;
 }
- @media only screen and (max-width: 600px){ 
+ /* @media only screen and (max-width: 600px){ 
    p.about-text{
     width:75vw;
   }
@@ -71,5 +74,5 @@ form{
     display: flex;
     justify-content: center;
   }
-}  
+}   */
 </style>

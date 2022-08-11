@@ -7,10 +7,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <router-link class="nav-link active" aria-current="page" href="#">Login in</router-link>
-        <router-link class="nav-link" href="#">Catalogue</router-link>
-        <router-link class="nav-link" href="#">Cart</router-link>
-        <router-link class="nav-link" href="#">Profile</router-link>
+        <div v-if="user">
+          <router-link class="nav-link" :to="{name:'catalogue'}">Catalogue</router-link>
+          <router-link class="nav-link" :to="{name:'cart'}">Cart</router-link>
+          <router-link class="nav-link" :to="{name:'profile'}">Profile</router-link>
+        </div>
+        <div v-else>
+          <router-link class="nav-link" :to="{name:'login'}">Login in</router-link>
+          <router-link class="nav-link" :to="{name:'register'}">Register</router-link>
+        </div>
       </div>
     </div>
   </div>

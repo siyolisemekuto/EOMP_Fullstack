@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
        this is a Catalogue 
     </div>
 </template>
