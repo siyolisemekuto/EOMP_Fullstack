@@ -1,16 +1,15 @@
 <template>
- <div>
-  <h1>Personal Fumes</h1>
-  <div class="container">
+ <div class="col-md-6">
+  <div class="container ">
     <h1>Log in to your account.</h1>
     <form @submit.prevent="SubmitForm">
       <div >
         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required  v-model="email">
         <input type="password" name="password" id="password" class="form-control" placeholder="Password" required v-model="Password">
       </div>
-      <button type="submit" class="btn" v-on:click="Login()">Log in</button>
+      <button type="submit" class="btn" v-on:click="POST">Log in</button>
     </form>
-    <router-link :to="{name:'register'}">Create and account</router-link>
+    <router-link :to="{name:'register'}" class="register">Don't have an account?</router-link>
   </div>
 </div>    
 </template>
@@ -18,7 +17,7 @@
 <script>
 export default {
   name: 'Login',
-  methods: "POST"
+  methods:'POST'
 }
 
 </script>
@@ -32,12 +31,16 @@ export default {
 }
 .container{
   background-color:white;
-  width: 50vw;
+  width: 40vw;
   height: 68vh;
-  margin-top: 150px;
+  margin-top: 110px;
   margin-bottom: 20px;
-  border:1px solid;
-  
+  border:1px solid grayscale;
+  box-shadow:0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 h1{
   font-size:25px;
@@ -45,25 +48,44 @@ h1{
 input{
     height: 48px;
     padding: 19px 16px 7px;
+    width:20rem;
+    color:black;  
+    margin-bottom:10px;
+
     /* margin: 20px;
     border: none; */
-    border: 1px solid;
+    border: 1px solid gray;
     /* background:inherit; */
+}
+button{
+  background-color:#141414;
+  color:white;
+  border-radius: 0;
+  height: 48px;
+  padding: 19px 16px 7px;
+  width:20rem;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: large;
+}
+button:hover{
+  background-color:rgba(20,20,20,0.8);
+  
+}
+.register{
+  text-decoration:underline;
+  color:#C7A17F;
 }
 :-ms-input-placeholder::after{
     display: none;
 }
-.btn{
-    margin-top: 20px;
-    padding: 5px;
-    font-size: large;;
-    border-radius: 9px;
-}
+
 form{
   width: fit-content;
-  display: flex;
+  display:flex;
   flex-direction:column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
  /* @media only screen and (max-width: 600px){ 
    p.about-text{

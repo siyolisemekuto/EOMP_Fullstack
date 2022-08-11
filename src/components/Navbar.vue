@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Personal Fumes</a>
+    <router-link class="navbar-brand" :to="{name:'home'}">
+    <span class="style">Personal Fumes</span>
+    </router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,7 +15,6 @@
           <router-link class="nav-link" :to="{name:'profile'}">Profile</router-link>
         </div>
         <div v-else>
-          <router-link class="nav-link" :to="{name:'login'}">Login in</router-link>
           <router-link class="nav-link" :to="{name:'register'}">Register</router-link>
         </div>
       </div>
@@ -57,7 +58,7 @@ export default {
 }
 </script>
 <style scoped>
-   
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
    nav{
     background-color: #141414;
     box-shadow: 10px ;
@@ -71,15 +72,18 @@ export default {
    }
    .navbar-brand{
     color:white;
-    text-decoration: underline;
     font-size: 25px;
     margin-top: 15px;
    }
    .container-fluid{
     height:50px;
    }
-
-   /* .nav-link{
+   span{
+    font-family: 'Italianno', cursive;
+    font-size:45px;
+    font-weight:lighter;
+   }
+ .nav-link{
     text-decoration:none;
     display:flex;
     align-items: center;
@@ -89,7 +93,7 @@ export default {
     display:flex;
     justify-content: end;
     
-   }
+   } 
    ul{
     list-style: none;
     display: flex;
@@ -139,7 +143,7 @@ export default {
     display:flex;
     flex-direction: column;
     justify-content: end;
-   } */
+   } 
 
 
 </style>

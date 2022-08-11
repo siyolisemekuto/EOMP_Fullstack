@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello col-md-6">
     <img :src="imgUrl" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" />
   </div>
 </template>
@@ -29,8 +29,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 img{
-  width:100vw;
-  height:90vh;
+  width: 40vw;
+  height: 68vh;
+  margin-right:60px;
+  margin-left:60px;
+  margin-top: 110px;
+  margin-bottom: 20px;
+  box-shadow:0 5px 5px 0 rgba(0, 0, 0, 0.2);
   object-fit:cover;
 }
+
 </style>
