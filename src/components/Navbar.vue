@@ -14,9 +14,9 @@
           <router-link class="nav-link" :to="{name:'cart'}">Cart</router-link>
           <router-link class="nav-link" :to="{name:'profile'}">Profile</router-link>
         </div>
-        <div v-else>
+        <!-- <div v-else>
           <router-link class="nav-link" :to="{name:'register'}">Register</router-link>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -70,6 +70,12 @@ export default {
     padding: 10px;
     width: 100%;
    }
+   .navbar{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+   }
    .navbar-brand{
     color:white;
     font-size: 25px;
@@ -82,23 +88,14 @@ export default {
     font-family: 'Italianno', cursive;
     font-size:45px;
     font-weight:lighter;
+    margin-left: 50px;
    }
  .nav-link{
     text-decoration:none;
-    display:flex;
-    align-items: center;
-    
    }
-   .nav-links:not(.nav-brand){
-    display:flex;
-    justify-content: end;
-    
-   } 
+   
    ul{
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
-     
    }
    li{
     text-align: end!important;
@@ -122,14 +119,14 @@ export default {
     width:100%;
    }
 
-   .nav-links .router-link-exact-active {
+   /* .nav-links .router-link-exact-active {
     border-bottom: display;
     transition: all 0.35s ease-in-out;
-   }
-   .icon{
+   } */
+   /* .icon{
     display: flex;
     justify-content: end;
-   }
+   } */
    .fa-bars{
     font-size: 200%;
    }
@@ -139,11 +136,11 @@ export default {
     border-bottom: none;
     padding: 5px;
    }
-   .dropdown{
+   /* .dropdown{
     display:flex;
     flex-direction: column;
     justify-content: end;
-   } 
+   }  */
 
 
 </style>

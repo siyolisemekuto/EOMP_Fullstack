@@ -33,7 +33,7 @@ export default {
   background-color:white;
   width: 50vw;
   height: 68vh;
-  margin-top: 110px;
+  margin-top: 80px;
   margin-bottom: 20px;
   border:1px solid grayscale;
   box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);

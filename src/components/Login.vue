@@ -48,7 +48,7 @@ h1{
 input{
     height: 48px;
     padding: 19px 16px 7px;
-    width:20rem;
+    width:300px;
     color:black;  
     margin-bottom:10px;
 
