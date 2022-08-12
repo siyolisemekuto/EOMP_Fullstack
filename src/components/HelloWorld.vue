@@ -10,15 +10,15 @@ export default {
   
   data () {
     return{
-      imgUrl: "https://i.postimg.cc/pLyCyBVq/wallpaper.jpg"
+      imgUrl: "https://i.postimg.cc/1zw6RMsj/Hair-Care-Fragrances-Beauty-Products-Beaut-bar.jpg"
     }
   }, 
   methods: {
     mouseover(){
-      this.imgUrl = "https://i.postimg.cc/yYk3V2Nr/lucas-mendes-Cyfm-Spq-NMD8-unsplash.jpg"
+      this.imgUrl = "https://i.postimg.cc/Y2Zp871Q/Cosmetics-Makeup-Still-Life-Product-Photography-London.jpg"
     },    
     mouseleave(){
-      this.imgUrl = "https://i.postimg.cc/pLyCyBVq/wallpaper.jpg"
+      this.imgUrl = "https://i.postimg.cc/1zw6RMsj/Hair-Care-Fragrances-Beauty-Products-Beaut-bar.jpg"
     }
   },
 }

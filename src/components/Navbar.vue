@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <div v-if="user">
+        <div v-if="!user">
           <router-link class="nav-link" :to="{name:'catalogue'}">Catalogue</router-link>
           <router-link class="nav-link" :to="{name:'cart'}">Cart</router-link>
           <router-link class="nav-link" :to="{name:'profile'}">Profile</router-link>
