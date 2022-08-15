@@ -5,11 +5,11 @@
     <span class="style">Personal Fumes</span>
     </router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa-solid fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <div v-if="user">
+        <div v-if="!user">
           <router-link class="nav-link" :to="{name:'catalogue'}">Catalogue</router-link>
           <router-link class="nav-link" :to="{name:'cart'}">Cart</router-link>
           <router-link class="nav-link" :to="{name:'profile'}">Profile</router-link>
@@ -25,19 +25,6 @@
 
 <script>
 export default {
-    data(){
-        return{
-            scrollPosition:null,
-            mobile:false,
-            mobileNav:false,
-            windowWidth:null,
-        }
-    },
-    methods: {
-     created(){
-    window.addEventListener('resize',this.ScreenChecker);
-    this.ScreenChecker()
-  },
   methods:{
     toggleMobileNav(){
       this.mobileNav = !this.mobileNav
@@ -54,8 +41,7 @@ export default {
       }
     }
   }  
-    },
-}
+    }
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
@@ -70,6 +56,7 @@ export default {
     padding: 10px;
     width: 100%;
    }
+   
    .navbar{
     display: flex;
     flex-wrap: nowrap;
@@ -127,8 +114,13 @@ export default {
     display: flex;
     justify-content: end;
    } */
+   .navbar-nav{
+    display:flex;
+    flex-wrap:no-wrap;
+   }
    .fa-bars{
     font-size: 200%;
+    color:white;
    }
    .nav-link{
     text-decoration: none;
@@ -136,11 +128,11 @@ export default {
     border-bottom: none;
     padding: 5px;
    }
-   /* .dropdown{
+   .dropdown{
     display:flex;
     flex-direction: column;
     justify-content: end;
-   }  */
+   } 
 
 
 </style>
