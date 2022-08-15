@@ -3,7 +3,6 @@ import axios from 'axios';
 const grpjpURL = 'https://ps-fumes.herokuapp.com/';
 export default createStore({
   state: {
-    users: null,
     user: null,
     products: null,
     product: null
@@ -11,9 +10,6 @@ export default createStore({
   getters: {
   },
   mutations: {
-    setUsers (state, values) {
-      state.users = values;
-    },
     setUser (state, value) {
       state.user = value;
     },
@@ -39,8 +35,8 @@ export default createStore({
         context.commit('setProduct', results);
       }
     },
-    fetchUsers: async (context) => {
-      const res = await axios.get(grpjpURL + 'users');
+    fetchUser: async (context) => {
+      const res = await axios.get(grpjpURL + 'user');
       const { results } = await res.data;
       if (results) {
         context.commit('setUsers', results);
