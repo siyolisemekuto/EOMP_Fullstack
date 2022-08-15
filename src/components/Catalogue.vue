@@ -1,9 +1,9 @@
 <template>
     <div>
-      <h1>This is a cart</h1>
-      <div @mouseover=true class="cards">
-  <img :src="product.image" alt="product image">
-  <h1>{{product.name}}</h1>
+        <h1>This is a catalogue</h1>
+        <div v-for="product of products" class="cards" >
+            <img :src="product.imgUrl" alt="product image">
+            <h1>{{product.title}}</h1>
             <p>{{product.description}}</p>
             <p>{{product.price}}</p>
         </div>   
