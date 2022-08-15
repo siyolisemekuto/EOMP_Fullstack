@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+DB_HOST=bp3sh1re3dvv1e900ykz-mysql.services.clever-cloud.com
+DB_USER=upaxenkuh3zrsnhx
+DB_PASS=jp1rZMV1ynfbfRcQAZ34
+DB_NAME=bp3sh1re3dvv1e900ykz
+jwtSecret=Nobody_should_know_this
