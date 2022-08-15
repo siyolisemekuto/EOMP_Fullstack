@@ -7,17 +7,45 @@
         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required  v-model="email">
         <input type="password" name="password" id="password" class="form-control" placeholder="Password" required v-model="Password">
       </div>
-      <button type="submit" class="btn" v-on:click="POST">Log in</button>
+      <button type="submit" class="btn" v-on:click="login()">Log in</button>
     </form>
-    <router-link :to="{name:'register'}" class="register">Don't have an account?</router-link>
+    <router-link :to="{name:'register'}" class="register">Register an account</router-link>
   </div>
 </div>    
 </template>
 
 <script>
 export default {
-  name: 'Login',
-  methods:'POST'
+  name: "Login",
+  // users() {
+  //   return {
+  //     email: "",
+  //     password: ""
+  //   };
+  // },
+  methods: {
+    async login() {
+      let response = await this.$store.dispatch("fetchUser", {
+        email: this.email,
+        password: this.password
+      })
+      console.error(error);
+      
+},
+ ...mapActions(["LogIn"]),
+    async submit() {
+      const User = new FormData();
+      User.append("email", this.form.email);
+      User.append("password", this.form.password);
+      try {
+        await this.LogIn(User);
+        this.$router.push("/products");
+        this.showError = false;
+      } catch (error) {
+        this.showError = true;
+      }
+    },
+  }
 }
 
 </script>

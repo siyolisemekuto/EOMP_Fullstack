@@ -4,19 +4,19 @@
           <router-link to=/ class="navbar-brand active">Personal Fumes</router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div v-if="!user">
+    </button>
+        <div v-if="!user">
                 <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="nav-links">
                   <li><router-link to=/catalogue class=nav-link id="nav-about">Catalogue</router-link></li>
                   <li><router-link to=/cart class=nav-link id="nav-experience">Cart</router-link></li>                        
                   <li><router-link to=/profile class=nav-link id="nav-projects">Profile</router-link></li>
                   <li><router-link to=/contact class=nav-link  id="nav-contact">Contact</router-link></li>
                 </ul>
-            </div>
-            <!-- <div v-else>
+        </div>
+        <!-- <div v-else>
                  <li><router-link to=/register class=nav-link id="nav-testimonials">Register</router-link></li>
-            </div> -->
-        </nav>
+        </div> -->
+</nav>
       </div>
 </template>
 
@@ -36,6 +36,9 @@ export default {
         this.mobileNav  = false;
         
       }
+    },
+    mounted(){
+      // this.$store.dispatch('fe')
     }
   }  
     }
