@@ -10,7 +10,7 @@
                   <li><router-link to=/catalogue class=nav-link id="nav-about">Catalogue</router-link></li>
                   <li><router-link to=/cart class=nav-link id="nav-experience">Cart</router-link></li>                        
                   <li><router-link to=/profile class=nav-link id="nav-projects">Profile</router-link></li>
-                  <li><router-link to=/contact class=nav-link  id="nav-contact">Contact</router-link></li>
+                  <!-- <li><router-link to=/contact class=nav-link  id="nav-contact">Contact</router-link></li> -->
                 </ul>
             </div>
             <!-- <div v-else>
@@ -22,6 +22,11 @@
 
 <script>
 export default {
+  computed:{
+    user() {
+      return this.$store.state.user
+    }
+  },
   methods:{
     toggleMobileNav(){
       this.mobileNav = !this.mobileNav
@@ -36,6 +41,9 @@ export default {
         this.mobileNav  = false;
         
       }
+    },
+    mounted(){
+      // this.$store.dispatch('fe')
     }
   }  
     }

@@ -1,7 +1,9 @@
 <template>
   <Navbar/>
-  <router-view/>
-  <Contact/>
+  <div class="min-vh-100">
+    <router-view></router-view>
+  </div>
+  <!-- <Contact/> -->
   <Footer></Footer>
 </template>
 
@@ -9,13 +11,12 @@
 <script>
 import Navbar from "@/components/Navbar.vue"
 import Footer from "@/components/Footer.vue"
-import Contact from "@/components/Contact.vue"
+// import Contact from "@/components/Contact.vue"
 
 export default {
   components:{
     Navbar,
-    Footer,
-    Contact
+    Footer
 }
 }
 </script>
